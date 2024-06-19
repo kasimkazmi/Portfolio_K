@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
   font-family: "Garet";
   src: url("../fonts/Garet-Book.ttf") format("ttf"),
@@ -10,4 +6,11 @@
   /* Add more font formats if needed */
   /* Specify the path to your font files relative to the CSS file */
   /* Replace 'FontName' with the desired font name */
+}
+
+/* Use the imported font in your CSS */
+body {
+  font-family: "Garet-Book", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
