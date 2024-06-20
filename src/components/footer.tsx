@@ -1,64 +1,59 @@
 import React from "react";
-// import { Bg, Bg1, insta, fb, linkedIn, Email } from "../assets/index";
 
 const social = [
   {
     name: "instagram",
     link: "Instagram",
-    // icon: { insta },
   },
   {
     name: "facebook",
     link: "facebook.",
-    // icon: { fb },
   },
   {
     name: "linkedIn",
     link: "LinkedIn.",
-    // icon: { linkedIn },
   },
   {
     name: "Email",
     link: "Email.",
-    // icon: { Email },
   },
 ];
+
 function footer() {
   return (
-    <div className="bg-white bg-footer-background bg-cover bg-no-repeat  items-center h-screen w-screen">
-      <div className="flex justify-center items-center">
-        <div className=" container mx-auto text-left pb-10">
-          <p className="text-white text-lg font-bold mb-4 font-Garet">
-            SAY HELLO
+    <footer className="bg-footer-background bg-cover bg-no-repeat h-screen  flex-col justify-center flex items-center w-screen">
+      <section className=" container  ml-20   animate-slidein300 -slidein pb-72 flex">
+        <div className=" mb-4 select-none">
+          <p className="text-lg text-white font-bold mb-4 cursor-default animate-bounce">
+            👋 SAY HELLO
           </p>
           <ul className="text-lg font-medium">
-            <li className="mb-2">
-              <a
-                href="mailto:kasimkazmi@gmail.com"
-                className="hover:underline text-white font-Garet"
-              >
-                kasimkazmi@gmail.com
-              </a>
+            <li
+              className=" text-white mb-2 hover:underline  bg-button-Color hover:bg-hover-color font-bold py-2 px-4 rounded transition-colors duration-500  hover:shadow-color-shadow
+            "
+            >
+              <a href="mailto:kasimkazmi@gmail.com">kasimkazmi@gmail.com</a>
             </li>
-            <li>
-              <a
-                href="https://t.me/mrolaolu"
-                className="hover:underline font-Garet"
-              >
-                t.me/mrolaolu
-              </a>
+            <li className="text-white mb-2 hover:underline bg-button-Color hover:bg-hover-color font-bold py-2 px-4 rounded transition-colors duration-500 hover:shadow-color-shadow">
+              <a href="https://discord.gg/T2TvD7wR">Discord</a>
             </li>
           </ul>
         </div>
-        <div className="  flex-col justify-ali">
-          <ul className="flex justify-center gap-6 flex-col">
+        <section className=" flex  pl-36 select-none ">
+          <ul className="gap-4  flex justify-center flex-col">
             <li>
-              <a href="#" className="hover:underline text-white font-Garet">
+              <a
+                href="#"
+                className="text-white hover:underline  hover:shadow-li-shadow shadow-color-shadow"
+              >
                 My Work
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline text-white font-Garet">
+              <a
+                href="#"
+                className="text-white hover:underline  hover:shadow-li-shadow shadow-color-shadow"
+              >
                 My Shelf
               </a>
             </li>
@@ -67,26 +62,26 @@ function footer() {
                 href="https://read.cv/kasimkazmi"
                 rel="noopener"
                 target="_blank"
-                className="hover:underline text-white font-Garet"
+                className="text-white hover:underline hover:shadow-li-shadow shadow-color-shadow"
               >
                 My Resume
               </a>
             </li>
           </ul>
-        </div>
-      </div>
+        </section>
+      </section>
 
-      <div className="border-t-2 border-white-500  pr-20 mx-auto ml-20">
-        <div className="flex justify-between items-center ">
-          <p className=" ml-20 text-white underline-offset-1 text-center font-Garet">
+      <div className="border-t lg: select-none  md:max-w-xl animate-slidein max-w-sm w-screen border-gray-200 py-4 ">
+        <div className="flex justify-between items-center py-24">
+          <p className=" text-center   font-Garet text-white">
             © Kasim Kazmi 2024
           </p>
-          <div className="flex flex-wrap mr-20">
+          <div className="flex flex-wrap space-x-4">
             {social.map((item, index) => (
               <a
                 key={index}
                 href={item.link}
-                className="hover:underline mr-20 text-white"
+                className="hover:underline mr-20font-Garet text-white "
               >
                 {item.name}
               </a>
@@ -94,7 +89,7 @@ function footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
