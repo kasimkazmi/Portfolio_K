@@ -1,24 +1,36 @@
 import React from "react";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 const social = [
   {
-    name: "instagram",
-    link: "Instagram",
+    name: "Facebook",
+    link: "https://www.linkedin.com/in/kasimkazmi/",
   },
   {
-    name: "facebook",
-    link: "facebook.",
+    name: "LinkedIn",
+    link: "https://www.facebook.com/Nobody.judge.me.",
   },
   {
-    name: "linkedIn",
-    link: "LinkedIn.",
+    name: "Github",
+    link: "https://github.com/kasimkazmi.",
   },
   {
-    name: "Email",
-    link: "Email.",
+    name: "Instagram",
+    link: "https://www.instagram.com/its_always_be_me/.",
   },
 ];
-
+const ICONS = {
+  Facebook: FaFacebook,
+  Github: FaGithub,
+  LinkedIn: FaLinkedin,
+  Instagram: FaInstagram,
+};
 function footer() {
   return (
     <footer className="bg-footer-background bg-cover bg-no-repeat h-screen  flex-col justify-center flex items-center w-screen">
@@ -64,31 +76,37 @@ function footer() {
                 target="_blank"
                 className="text-white hover:underline hover:shadow-li-shadow shadow-color-shadow"
               >
-                My Resume
+                My Résumé
               </a>
             </li>
           </ul>
         </section>
       </section>
 
-      <div className="border-t lg: select-none  md:max-w-xl animate-slidein max-w-sm w-screen border-gray-200 py-4 ">
-        <div className="flex justify-between items-center py-24">
-          <p className=" text-center   font-Garet text-white">
-            © Kasim Kazmi 2024
-          </p>
-          <div className="flex flex-wrap space-x-4">
-            {social.map((item, index) => (
+      <section className=" select-none w-screen px-16 ">
+        <hr className="relative  h-px animate-pulse pb-9" />
+
+        <div className="flex flex-wrap text-white space-x-4 justify-center text-2xl">
+          {social.map((item, index) => {
+            const Icon = ICONS[item.name];
+            return (
               <a
                 key={index}
                 href={item.link}
-                className="hover:underline mr-20font-Garet text-white "
+                aria-label={item.name}
+                className=" font-Garet"
               >
-                {item.name}
+                <Icon className="hover:animate-pulse transform transition-transform duration-500 hover:scale-125" />
               </a>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </div>
+        <div className=" pt-14">
+          <p className=" text-center font-Garet text-white">
+            © 2024 Kasim Kazmi . All Rights Reserved. Get in Touch ©
+          </p>
+        </div>
+      </section>
     </footer>
   );
 }
